@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from imgur import views
+from accounts import views
 
 urlpatterns = [
     url(r'^$', views.HomePage,name='Home'),
-    url(r'^', include('imgur.urls', namespace='imgur')),
+    url(r'^', include('accounts.urls', namespace='imgur')),
     url(r'^admin/', admin.site.urls),
 ]
