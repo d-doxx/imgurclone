@@ -97,23 +97,18 @@
 
 				<!-- Footer -->
 					<footer id="signup" class="panel">
-						<div class="inner split">
-							<form action="/signup/" method="post">
+						<form action='/signup/' method="post">
 							    {% csrf_token %}
-							    {{ form.as_p }}
-						    	<button type="submit">Sign up</button>
-	  						</form>
-						</div>
+							    {{ signup.as_p }}
+						    <button type="submit">Sign Up</button>
+  						</form>
 				    </footer>
 					<footer id="login" class="panel">
-						<div class="inner split">
-							<form action="/login/" method="post">
+							<form action = '/login/' method="post">
 							    {% csrf_token %}
-							    {{ form.as_p }}
+							    {{ login.as_p }}
 					    	<button type="submit">Log In</button>
   							</form>
-
-						</div>
 				    </footer>
 		<!-- Scripts -->
 			<script src="{%static "assets/js/jquery.min.js" %}"></script>

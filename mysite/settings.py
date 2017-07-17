@@ -124,4 +124,4 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
-LOGIN_REDIRECT_URL = 'base'
+LOGIN_REDIRECT_URL = 'user'
