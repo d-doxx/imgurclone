@@ -13,6 +13,10 @@ def UserPage(request):
 	return render(request,'user.html')
 
 def SignUp(request):
+	data = {
+	'signup': UserCreationForm(),
+	'login': AuthenticationForm(),
+	}
 	if request.method == 'POST':
 		form = UserCreationForm(request.POST)
 		if form.is_valid():
@@ -26,6 +30,6 @@ def SignUp(request):
 			print(form.errors)
 	else:
 		form = UserCreationForm()
-	return render(request, 'user.html')
+	return render(request, 'index.html',data)
 
 # Create your views here.

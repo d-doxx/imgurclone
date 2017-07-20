@@ -6,6 +6,7 @@ urlpatterns = [
 	url(r'^user/$', views.UserPage, name='user'),
     url(r'^signup/$', views.SignUp, name='signup'),
     #{'template_name': } is necessary because by default django searches for templates at register/ , we have to rediirect them to our templates
-    url(r'^login/$', auth_views.login,{'template_name': 'index.html'},name='login'),
-    url(r'^logout/$', auth_views.logout,{'template_name': 'logout.html'},name='logout'),
+    url(r'^signin/$', views.HomePage,name='signin'),
+    url(r'^login/$', auth_views.login,name='login'),
+    url(r'^logout/$', auth_views.logout,{'next_page': 'Home'},name='logout'),
 ]
